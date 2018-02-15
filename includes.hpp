@@ -8,6 +8,8 @@
 #include "osync.hpp"
 #include "prettyprint.hpp"
 #include "simple_thread_pool.hpp"
+#include "flat_set.hpp"
+#include "flat_map.hpp"
 
 #include <algorithm>
 #include <array>

@@ -22,6 +22,7 @@ Header-only C++ boilerplate code shipped with Boost, fmt, prettyprint. Requires 
 * `osync` to make std streams thread safe:
   * `std::cout << sandbox::osync << "thread " << "safe";`
 * simple thread pool
+* `flat_map` and `flat_set` containers: these are `std::map` and `std::set` implementations using a contiguous data structure as the underlying storage.
 
 ## How to use
 
