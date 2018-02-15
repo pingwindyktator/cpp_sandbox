@@ -21,7 +21,7 @@ public:
 
     ~logger_helper()
     {
-        os << get_ss().str() + '\n';
+        os << get_ss().rdbuf() << '\n';
         os.flush();
     }
 

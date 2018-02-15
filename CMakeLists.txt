@@ -4,7 +4,7 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
     message(FATAL_ERROR "Do not build in-source. Please remove CMakeCache.txt and the CMakeFiles/ directory. Then build out-of-source.")
 endif()
 
-find_package(Boost COMPONENTS filesystem system program_options REQUIRED)
+find_package(Boost COMPONENTS filesystem system program_options date_time REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
 if(NOT CMAKE_BUILD_TYPE)
