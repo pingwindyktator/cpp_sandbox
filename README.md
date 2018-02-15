@@ -27,4 +27,5 @@ Header-only C++ boilerplate code shipped with Boost, fmt, prettyprint. Requires 
 
 1) `git clone` this repo next to your `main.cpp`
 2) Place `include(cpp_sandbox/CMakeLists.txt)` at the end of your `CMakeLists.txt`
-3) `#include "cpp_sandbox/sandbox.hpp"` and have fun!
+3) `#define SANDBOX_DONT_USE_NAMESPACE` if you don't want any `using namespace`
+4) `#include "cpp_sandbox/sandbox.hpp"` and have fun!
