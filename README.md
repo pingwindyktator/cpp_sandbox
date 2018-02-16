@@ -15,7 +15,7 @@ Header-only C++ boilerplate code shipped with Boost, fmt, prettyprint. Requires 
 * user-defined chrono literals
 * generic `std::hash` for enum types
 * all commonly used std includes
-* `std::bin` IO manipulator
+* `sandbox::bin` IO manipulator
 * simple logger:
   * `LOG() << fmt::format("some value: {}", some_value);`
   * `LOG(std::cerr) << "something" << " else";`
