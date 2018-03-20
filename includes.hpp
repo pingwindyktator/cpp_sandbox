@@ -2,14 +2,15 @@
 
 #include "bignum.hpp"
 #include "biniomanip.hpp"
+#include "flat_map.hpp"
+#include "flat_set.hpp"
 #include "fmt.hpp"
 #include "logger.hpp"
 #include "macroOverloading.hpp"
 #include "osync.hpp"
 #include "prettyprint.hpp"
 #include "simple_thread_pool.hpp"
-#include "flat_set.hpp"
-#include "flat_map.hpp"
+#include "type_name.hpp"
 
 #include <algorithm>
 #include <array>
@@ -43,6 +44,7 @@
 #include <thread>
 #include <tuple>
 #include <type_traits>
+#include <typeinfo>
 #include <unistd.h>
 #include <unordered_map>
 #include <utility>

@@ -1,11 +1,11 @@
 #pragma once
-#include <memory>
-#include <string>
+#include <boost/filesystem.hpp>
 #include <chrono>
 #include <fstream>
+#include <memory>
 #include <sstream>
+#include <string>
 #include <sys/time.h>
-#include <boost/filesystem.hpp>
 
 #define __FUNC_NAME__ sandbox::details::func_name(__PRETTY_FUNCTION__)
 #define __FILENAME__ boost::filesystem::path{__FILE__}.filename().string()
@@ -109,43 +109,40 @@ namespace std {
 template <class E>
 class hash
 {
-    using sfinae = typename std::enable_if<std::is_enum<E>::value, E>::type;
+    using sfinae       = typename std::enable_if<std::is_enum<E>::value, E>::type;
     using underlying_t = typename std::underlying_type<E>::type;
 
 public:
-    size_t operator()(const E& e) const
-    {
-        return std::hash<underlying_t>()(static_cast<underlying_t>(e));
-    }
+    size_t operator()(const E& e) const { return std::hash<underlying_t>()(static_cast<underlying_t>(e)); }
 };
 }
 
-constexpr inline std::chrono::hours operator "" _h(unsigned long long i)
+constexpr inline std::chrono::hours operator"" _h(unsigned long long i)
 {
     return std::chrono::hours{i};
 }
 
-constexpr inline std::chrono::minutes operator "" _min(unsigned long long i)
+constexpr inline std::chrono::minutes operator"" _min(unsigned long long i)
 {
     return std::chrono::minutes{i};
 }
 
-constexpr inline std::chrono::seconds operator "" _s(unsigned long long i)
+constexpr inline std::chrono::seconds operator"" _s(unsigned long long i)
 {
     return std::chrono::seconds{i};
 }
 
-constexpr inline std::chrono::milliseconds operator "" _ms(unsigned long long i)
+constexpr inline std::chrono::milliseconds operator"" _ms(unsigned long long i)
 {
     return std::chrono::milliseconds{i};
 }
 
-constexpr inline std::chrono::microseconds operator "" _us(unsigned long long i)
+constexpr inline std::chrono::microseconds operator"" _us(unsigned long long i)
 {
     return std::chrono::microseconds{i};
 }
 
-constexpr inline std::chrono::nanoseconds operator "" _ns(unsigned long long i)
+constexpr inline std::chrono::nanoseconds operator"" _ns(unsigned long long i)
 {
     return std::chrono::nanoseconds{i};
 }
