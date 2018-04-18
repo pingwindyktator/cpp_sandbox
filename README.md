@@ -12,6 +12,8 @@ Header-only C++ boilerplate code shipped with Boost, fmt, prettyprint. Requires 
 * `std::unique_ptr<T> make_unique(Args&&... args);`
 * `struct identity;`
 * `std::chrono::milliseconds measure_execution_time(func_t&& func, Args&&... args);`
+* `benchmark_escape(void *p)` and `benchmark_clobber()` funcs to prevent optimizer ruin your performance analysis
+* `type_name<T>()` to get string representation of object type
 * user-defined chrono literals
 * generic `std::hash` for enum types
 * all commonly used std includes
