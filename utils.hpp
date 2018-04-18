@@ -95,6 +95,16 @@ struct identity
     }
 };
 
+static void benchmark_escape(void* p)
+{
+    asm volatile("" : : "g"(p) : "memory");
+}
+
+static void benchmark_clobber()
+{
+    asm volatile("" : : : "memory");
+}
+
 template <typename func_t, typename... Args>
 std::chrono::milliseconds measure_execution_time(func_t&& func, Args&&... args)
 {
