@@ -1,7 +1,7 @@
 #pragma once
 
 #if __cplusplus < 201103L
-#error You should really use al least C++11
+#error You should really use at least C++11
 #endif
 
 #include "utils.hpp"
